@@ -1,0 +1,13 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell syntax
+        run: for f in skills/openseo-manager/scripts/*.sh; do bash -n "$f"; done
+      - name: ShellCheck
+        run: shellcheck -x skills/openseo-manager/scripts/*.sh
+      - name: Manifests are valid JSON
+        run: for f in .claude-plugin/*.json; do jq empty "$f"; done

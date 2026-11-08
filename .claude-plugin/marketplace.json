@@ -1,0 +1,13 @@
+{
+  "name": "openseo-manager",
+  "owner": { "name": "weitzu-com", "url": "https://github.com/weitzu-com" },
+  "description": "Community tools for keeping OpenSEO set up and current in Claude Code.",
+  "plugins": [
+    {
+      "name": "openseo-manager",
+      "source": "./",
+      "description": "Set up, update, verify, and auto-update the official OpenSEO plugin.",
+      "category": "SEO"
+    }
+  ]
+}

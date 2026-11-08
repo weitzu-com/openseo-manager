@@ -1,0 +1,11 @@
+{
+  "name": "openseo-manager",
+  "displayName": "OpenSEO Manager",
+  "version": "0.1.0",
+  "description": "Set up, update, verify, and auto-update the official OpenSEO plugin in Claude Code.",
+  "author": { "name": "weitzu-com", "url": "https://github.com/weitzu-com" },
+  "homepage": "https://github.com/weitzu-com/openseo-manager",
+  "repository": "https://github.com/weitzu-com/openseo-manager",
+  "license": "MIT",
+  "keywords": ["openseo", "seo", "mcp", "auto-update", "claude-code"]
+}
