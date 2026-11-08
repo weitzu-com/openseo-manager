@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Read-only report of the OpenSEO setup in Claude Code. Changes nothing.
 set -uo pipefail
-# shellcheck source=common.sh
+# shellcheck source=SCRIPTDIR/common.sh
 . "$(cd "$(dirname "$0")" && pwd)/common.sh"
 need_claude
 
@@ -19,7 +19,7 @@ else
     echo "MCP:         $(jq -r '.mcpServers | to_entries[] | "\(.key) -> \(.value.url // .value.command)"' "$path/.mcp.json" | paste -sd ' ' -)"
   fi
   if [ -d "$path/skills" ]; then
-    echo "Skills:      $(find "$path/skills" -mindepth 2 -maxdepth 2 -name SKILL.md | wc -l | tr -d ' ') ($(ls "$path/skills" | paste -sd ' ' -))"
+    echo "Skills:      $(find "$path/skills" -mindepth 2 -maxdepth 2 -name SKILL.md | wc -l | tr -d ' ') ($(find "$path/skills" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sort | paste -sd ' ' -))"
   fi
 fi
 

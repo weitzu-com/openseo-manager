@@ -3,7 +3,7 @@
 # macOS: launchd agent. Linux: user crontab. Re-running replaces the old entry.
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
-# shellcheck source=common.sh
+# shellcheck source=SCRIPTDIR/common.sh
 . "$here/common.sh"
 # Copy the updater to a stable path: plugin cache paths change on every version.
 mkdir -p "$STATE_DIR/bin"

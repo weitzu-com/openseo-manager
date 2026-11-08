@@ -2,7 +2,7 @@
 # Update the OpenSEO marketplace and plugin in their existing scope.
 # Idempotent; safe to run from launchd/cron. Never touches other plugins.
 set -uo pipefail
-# shellcheck source=common.sh
+# shellcheck source=SCRIPTDIR/common.sh
 . "$(cd "$(dirname "$0")" && pwd)/common.sh"
 mkdir -p "$STATE_DIR"
 need_claude

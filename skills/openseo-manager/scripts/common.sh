@@ -1,4 +1,5 @@
 # shellcheck shell=bash
+# shellcheck disable=SC2034  # variables are used by the scripts that source this file
 # Shared helpers for openseo-manager scripts. Sourced, not executed.
 
 PLUGIN_ID="openseo@openseo"
